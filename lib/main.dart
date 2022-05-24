@@ -21,12 +21,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.lightGreen,
       ),
       routes: {
-	safeArea: (context) => const SafeAreaWidget(),
-	expanded: (context) => const ExpandedWidget(),
+        safeArea: (context) => const SafeAreaWidget(),
+        expanded: (context) => const ExpandedWidget(),
       },
       // home: const MyHomePage(title: appTitle),
       home: const SafeAreaWidget(),
     );
   }
 }
-
