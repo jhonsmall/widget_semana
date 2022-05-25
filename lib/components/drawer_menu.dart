@@ -16,6 +16,14 @@ class DrawerMenu extends StatelessWidget {
           icon: Icons.punch_clock_rounded,
           text: 'Expanded',
           onTap: () => Navigator.pushReplacementNamed(context, MyApp.expanded)),
+      _buildDrawerItem(
+          icon: Icons.filter_vintage_outlined,
+          text: 'Wrap',
+          onTap: () => Navigator.pushReplacementNamed(context, MyApp.wrap)),
+      _buildDrawerItem(
+          icon: Icons.apps_rounded,
+          text: 'Animated',
+          onTap: () => Navigator.pushReplacementNamed(context, MyApp.animated)),
     ]));
   }
 
