@@ -18,6 +18,13 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
     final r = rnd.nextInt(255);
     final g = rnd.nextInt(255);
     final b = rnd.nextInt(255);
+
+    final r2 = rnd.nextInt(255);
+    final g2 = rnd.nextInt(255);
+    final b2 = rnd.nextInt(255);
+
+    final borderRadius = BorderRadius.circular(rnd.nextInt(100).toDouble());
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('AnimatedContainer'),
@@ -34,10 +41,9 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
               height: rnd.nextInt(900).toDouble(),
               decoration: BoxDecoration(
                 color: Color.fromRGBO(r, g, b, 1),
-                borderRadius:
-                    BorderRadius.circular(rnd.nextInt(100).toDouble()),
+                borderRadius: borderRadius,
                 border: Border.all(
-                  color: Color.fromRGBO(r, g, b, 1),
+                  color: Color.fromRGBO(r2, g2, b2, 1),
                   width: rnd.nextInt(10).toDouble(),
                 ),
               ),
@@ -53,23 +59,5 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
         },
       ),
     );
-    // return Scaffold(
-    //     appBar: AppBar(
-    //       title: const Text('Animated Container'),
-    //     ),
-    //     drawer: const DrawerMenu(),
-    //     body: Center(
-    //       child: AnimatedContainer(
-    //         duration: const Duration(milliseconds: 1200),
-    //         curve: Curves.elasticInOut,
-    //         width: 100,
-    //         height: 100,
-    //         // color: Colors.red,
-    //         decoration: BoxDecoration(
-    //           borderRadius: BorderRadius.circular(50),
-    //           color: Colors.blue,
-    //         ),
-    //       ),
-    //     ));
   }
 }
